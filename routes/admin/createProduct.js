@@ -7,7 +7,7 @@ const Product = require('./products/models/Product')
 
 module.exports = {
 
-createProducts: (category)=>{
+createProducts: (category,next)=>{
     return new Promise((resolve, reject) => {
     waterfall([
       (callback) =>{
