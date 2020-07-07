@@ -6,7 +6,9 @@ const Product = require('./products/models/Product')
 const Category = require('./categories/models/Category');
 const {checkCategory} = require('./categories/utils/checkCategory')
 const {createProducts} = require('./createProduct')
-const {verifyCategory} = require('./adminValidation/categoryValidation')
+// const {checkCategory,verifyCategory} = require('./categories/utils/checkCategory')
+
+const verifyCategory = require('./adminValidation/categoryValidation')
 router.get('/add-category', (req, res, next) => {
   return res.render('admin/add-category', {
     // messages: req.flash('messages'),
