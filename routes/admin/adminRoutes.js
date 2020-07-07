@@ -4,8 +4,9 @@ const {waterfall}=require('async')
 const faker = require('faker')
 const Product = require('./products/models/Product')
 const Category = require('./categories/models/Category');
-const {checkCategory,verifyCategory} = require('./categories/utils/checkCategory')
+const {checkCategory} = require('./categories/utils/checkCategory')
 const {createProducts} = require('./createProduct')
+const {verifyCategory} = require('./adminValidation/categoryValidation')
 router.get('/add-category', (req, res, next) => {
   return res.render('admin/add-category', {
     // messages: req.flash('messages'),
